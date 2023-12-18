@@ -1,0 +1,31 @@
+Body {
+    background-color: rgb(225, 241, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a, button {
+    background-color: rgb(110, 184, 248);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: rgb(165, 0, 165);
+    font-weight: bold;
+    border-style: none;
+    height: 37px;
+}
+
+#card {
+    background-color: rgb(200, 229, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+header {
+    margin: 20px;
+}

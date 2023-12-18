@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import AddTodo from "./pages/AddTodo"
 import Home from "./pages/Home"
 import EditTodo from "./pages/EditTodo"
+import "./App.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 const App = () => {
   return (
@@ -11,16 +12,16 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route
-            path='/'
+            exact path='/'
             element={<Home />}
           />
           <Route
-            path='/'
+            exact path='/add-todo'
             element={<AddTodo />}
           />
           <Route
             // dynamic :id to create custom route
-            path='/'
+            exact path='/:id'
             element={<EditTodo />}
           />
         </Routes>

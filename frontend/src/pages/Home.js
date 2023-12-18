@@ -5,18 +5,24 @@ import { deleteTodo } from "../api/deleteTodo";
 const Home = () => {
     const [todos, setTodos] = useState([])
 
+    const fetchTodos = async () => {
+        let data = await readTodos()
+        setTodos(data.todos)
+        console.log(data.message)
+    }
 
     const deleteHandler = async (todo) => {
-      
+        const data = await deleteTodo(todo)
+        await fetchTodos()
     }
+
     useEffect(() => {
-        const fetchTodos = async () => {
-            let data = await readTodos()
-            setTodos(data.todos)
-            console.log(data.message)
+        async function initialFetch() {
+            await fetchTodos()
         }
-        fetchTodos()
+        initialFetch()
     }, [])
+    
 
     if (!todos) return <h1>loading...</h1>
     return (
